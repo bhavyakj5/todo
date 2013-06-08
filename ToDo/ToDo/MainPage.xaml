@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="ToDo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="My ToDo" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Grid Height="565" HorizontalAlignment="Left" Margin="10,10,0,0" Name="grid1" VerticalAlignment="Top" Width="446" ShowGridLines="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300*" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="71.5" />
+                        <RowDefinition Height="71.5" />
+                        <RowDefinition Height="71.5" />
+                        <RowDefinition Height="71.5" />
+                        <RowDefinition Height="71.5" />
+                        <RowDefinition Height="71.5" />
+                    <RowDefinition Height="136*" />
+                    
+                    </Grid.RowDefinitions>
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox1" VerticalAlignment="Top" Width="286" Grid.Row="0" DataContext="{Binding}" />
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox2" VerticalAlignment="Top" Width="286" Grid.Row="1" />
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox3" VerticalAlignment="Top" Width="286" Grid.Row="2" />
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox4" VerticalAlignment="Top" Width="286" Grid.Row="3" />
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox5" VerticalAlignment="Top" Width="286" Grid.Row="4" />
+                    <TextBox Height="75" HorizontalAlignment="Left" Margin="10,0,0,0" Name="textBox6" VerticalAlignment="Top" Width="286" Grid.Row="5" />
+              
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add1" VerticalAlignment="Top" Width="109" Click="add1_Click" Grid.RowSpan="2" Grid.Column="1" />
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x1" VerticalAlignment="Top" Width="69" Grid.Column="1" Click="x1_Click" Grid.RowSpan="2" />
+                    
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add2" VerticalAlignment="Top" Width="109" Grid.Column="1" Grid.Row="1" Click="add2_Click"/>
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x2" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="1" Click="x2_Click"/>
+                    
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add3" VerticalAlignment="Top" Width="109" Grid.Column="1" Grid.Row="2" Click="add3_Click" />
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x3" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="2" Click="x3_Click"/>
+                    
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add4" VerticalAlignment="Top" Width="109" Grid.Column="1" Grid.Row="3" Click="add4_Click"/>
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x4" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="3" Click="x4_Click"/>
+                    
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add5" VerticalAlignment="Top" Width="109" Grid.Column="1" Grid.Row="4" Click="add5_Click"/>
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x5" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="4" Click="x5_Click"/>
+                    
+                    <Button Content="Add" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="add6" VerticalAlignment="Top" Width="109" Grid.Column="1" Grid.Row="5" Click="add6_Click"/>
+                    <Button Content="X" Height="75" HorizontalAlignment="Left" Margin="81,0,0,0" Name="x6" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="5"  Click="x6_Click"/>
+                    <!--<Button Content="Undo" Height="75" HorizontalAlignment="Left" Margin="4,0,0,0" Name="undo6" VerticalAlignment="Top" Width="136" Grid.Column="1" Grid.Row="5" Visibility="Collapsed" Click="undo6_Click"/>-->
+                <my:AdControl Height="80" HorizontalAlignment="Left" Margin="-11,10,0,0" Name="adControl1" VerticalAlignment="Top" Width="480" Grid.Row="6" Grid.ColumnSpan="2" ApplicationId="9e2a7a6a-9f88-4205-8de9-0e76c4016534" AdUnitId="130216" />
+
+                </Grid>
+            </Grid>
+        <Grid.Background>
+            <ImageBrush />
+        </Grid.Background>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.feature.settings.rest.png" Text="Instructions" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.share.rest.png" Text="About" Click="ApplicationBarIconButton_Click_1"/>
+            <shell:ApplicationBar.MenuItems>
+              <!--  <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/> -->
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
